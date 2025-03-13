@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої одногрупники</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: lightgray;
+        }
+        img {
+            width: 120px;
+            height: 90px;
+        }
+    </style>
+    <script>
+        function showBio(bio) {
+            document.getElementById("bio").innerHTML = bio;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="5">
+                <img src="anime.gif" alt="Анімація" width="50"> Мої одногрупники
+            </th>
+        </tr>
+        <tr>
+            <td><img src="1.jpg" alt="Фото 1" onclick="showBio('Петренко Іван, 01.01.2000, email@example.com, улюблена мелодія: Moonlight Sonata')"></td>
+            <td><img src="2.jpg" alt="Фото 2" onclick="showBio('Сидоренко Марія, 12.05.2001, email@example.com, улюблена мелодія: Imagine')"></td>
+            <td><img src="3.jpg" alt="Фото 3" onclick="showBio('Коваленко Олег, 23.09.2000, email@example.com, улюблена мелодія: Bohemian Rhapsody')"></td>
+            <td><img src="4.jpg" alt="Фото 4" onclick="showBio('Захаренко Оксана, 30.07.1999, email@example.com, улюблена мелодія: Nothing Else Matters')"></td>
+        </tr>
+        <tr>
+            <td colspan="4" id="bio">[Коротка біографія студентів]</td>
+        </tr>
+    </table>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Ваш браузер не підтримує аудіо.
+    </audio>
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+        Ваш браузер не підтримує відео.
+    </video>
+    <p><a href="audio.mp3" download>Завантажити аудіо</a></p>
+    <p><a href="video.mp4" download>Завантажити відео</a></p>
+</body>
+</html>
