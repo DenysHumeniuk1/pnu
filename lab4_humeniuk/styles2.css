@@ -1,0 +1,29 @@
+.paragraph {
+    margin-left: 60px;
+    padding: 10px;
+    width: 80%;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.first {
+    color: green;
+    background-color: yellow;
+    border-style: dashed;
+    border-color: darkgreen;
+}
+
+.second {
+    color: red;
+    background-color: lightblue;
+    border-style: double;
+    border-color: darkred;
+    margin-left: 120px;
+}
+
+.third {
+    color: blue;
+    background-color: lightgray;
+    border-color: black;
+    margin-left: 180px;
+}
