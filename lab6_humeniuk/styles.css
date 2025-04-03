@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #87CEEB, #1E90FF);
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: radial-gradient(circle, #4682B4, #1E90FF);
+    border-radius: 0 0 20px 20px;
+    transition: background 0.5s ease-in-out;
+}
+
+header:hover {
+    background: radial-gradient(circle, #1E90FF, #4682B4);
+}
+
+nav {
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #3498db;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #3498db;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+section {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+img {
+    width: 200px;
+    border-radius: 10px;
+    border: 5px solid white;
+    transition: transform 0.5s ease-in-out;
+}
+
+img:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #1E90FF;
+    border-radius: 20px 20px 0 0;
+    transition: background 0.5s;
+    transition: transform 0.5s ease-in-out;
+}
+
+footer:hover {
+    transform: scale(1.1);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.small-img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.4s ease-in-out;
+}
+
+.small-img:hover {
+    transform: skewX(-10deg) translateY(-10px);
+}
+
+.animated-box {
+    width: 250px;
+    height: auto;
+    margin: 20px auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.animated-box:hover {
+    transform: rotateY(180deg);
+}
