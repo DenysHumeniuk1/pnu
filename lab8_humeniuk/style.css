@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+      "header header header"
+      "left top top"
+      "left main right"
+      "footer footer footer";
+  grid-template-rows: 60px 60px 1fr 60px;
+  grid-template-columns: 120px 1fr 150px;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.search-bar {
+  padding: 5px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.left-menu {
+  grid-area: left;
+  background-color: royalblue;
+  color: white;
+  padding: 10px;
+}
+
+.left-menu ul {
+  list-style: none;
+}
+
+.left-menu li {
+  margin-bottom: 10px;
+}
+
+.left-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main {
+  grid-area: main;
+  background-color: white;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.right-box {
+  grid-area: right;
+  background-color: royalblue;
+  color: white;
+  padding: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: gold;
+  text-align: center;
+  padding: 10px;
+}
+
+.top-box {
+  grid-area: top;
+  background-color: lightcoral;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  transform: rotate(-2deg);
+}
+
+/* Для смартфонів (екран до 600px) */
+@media (max-width: 600px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "top"
+      "main"
+      "left"
+      "right"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .left-menu, .right-box {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .top-box {
+    transform: none;
+  }
+}
+
+/* Для друку */
+@media print {
+  .header, .left-menu, .right-box, .top-box, .footer {
+    display: none;
+  }
+
+  .container {
+    grid-template-areas: "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .main {
+    font-size: 14pt;
+    color: black;
+  }
+}
