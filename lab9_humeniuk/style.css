@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('MyFont.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'CustomFont', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header, .footer {
+  background: gold;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar {
+  padding: 5px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.middle {
+  font-size: 18px;
+  flex: 1;
+  display: flex;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.left-menu {
+  background-color: royalblue;
+  color: white;
+  width: 120px;
+  padding: 10px;
+  font-family: 'Caveat', cursive;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.top-box {
+  background-color: lightcoral;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  transform: rotate(-2deg);
+  text-align: center;
+}
+
+.main {
+  background: white;
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.right-box {
+  background-color: royalblue;
+  color: white;
+  width: 150px;
+  padding: 10px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.main {
+  font-size: calc(12px + 0.5vw);
+}
+
+.main p::after {
+  content: " (" attr(data-info) ")";
+  color: gray;
+  font-size: 0.8em;
+}
+
+@media (max-width: 600px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .middle {
+    flex-direction: column;
+  }
+
+  .left-menu, .right-box {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .top-box {
+    transform: none;
+  }
+}
+
+@media print {
+  .header, .left-menu, .right-box, .top-box, .footer {
+    display: none;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .main {
+    font-size: 14pt;
+    color: black;
+  }
+}
