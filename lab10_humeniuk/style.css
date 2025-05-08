@@ -1,0 +1,23 @@
+.cont1 section{
+  padding: 50px 0;
+}
+
+.cont1 .carousel-control-next-icon{
+  background-image: url(../img/arrow_forward_ios_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg);
+}
+
+.cont1 .carousel-control-prev-icon{
+  background-image: url(../img/arrow_back_ios_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg);
+}
+
+.cont1 .carousel-control-next, .carousel-control-prev{
+  width: 20px;
+}
+
+.cont1 .carousel-control-prev {
+  left: -35px;
+}
+
+.cont1 .carousel-control-next {
+  right: -35px;
+}
